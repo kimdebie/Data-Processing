@@ -1,0 +1,22 @@
+/*
+ * Change the color of the continent
+ */
+.landxx
+{
+   fill: #3399ff;
+   stroke:#ffffff;
+   stroke-width:0.5;
+   fill-rule:evenodd;
+}
+
+/* country colors */
+.nlx
+{
+	fill:#ff9900;  
+}
+
+.es
+{
+	fill:#cc0000;
+}
+

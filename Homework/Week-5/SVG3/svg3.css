@@ -1,0 +1,21 @@
+/*
+ * Change the color of the continent
+ */
+.landxx
+{
+   fill: #2b8cbe;
+   stroke:#ffffff;
+   stroke-width:0.5;
+   fill-rule:evenodd;
+}
+
+h1
+{
+	font: 22px Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}
+
+#description
+{
+	font: 12px Arial, Helvetica, sans-serif;
+}

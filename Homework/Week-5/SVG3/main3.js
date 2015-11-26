@@ -1,12 +1,58 @@
-// Author: Robin Kuiper
-// Date: 27 03 2014
+/* Kim de Bie, 11077379
+ * Colors countries on a map based on their value.
+ */ 
 
+var rawData = JSON.parse(document.getElementById('rawdata').innerHTML);
 
-// List of ISO 3166-1 alpha 2 country codes and
-// their respective alpha 3 country codes and country names.
+/* function to change the colors of all countries */
+function changeColors(){
+	for (var i = 1; i < rawData.length; i++) {
+	var name = rawData[i][0];
+	var debt = rawData[i][1];
+
+	// replace each WorldBank abbreviation with SVG abbrevation
+	for (var j = 0; j < countryCodes.length; j++){
+		if (name == countryCodes[j][1]){
+			name = countryCodes[j][0];
+		};
+	};
+
+	// give each country the appropriate color
+	if (debt < 30) {
+		var color = "#f1eef6";
+	}	else if (debt < 60) {
+		var color = "#bdc9e1";
+	} 	else if (debt < 90) {
+		var color = "#74a9cf";
+	}	else if (debt < 120) {
+		var color = "#2b8cbe";
+	}	else if (debt < 150) {
+		var color = "#045a8d";
+	}	else {
+		var color = "#fee0d2";
+	};
+
+	// change the color for the current country
+	changeColor(name, color);		
+	};	
+
+};
+
+/* the coloring can only be executed when the window has loaded */
+window.onload = function() {
+	changeColors();
+	};
+
+/* changeColor takes a path ID and a color (hex value)
+   and changes that path's fill color */
+function changeColor(id, color) {
+        document.getElementById(id).style.fill = color;
+};
+
+/* country codes as adopted from provided file */
 var countryCodes = [
     ["af", "AFG", "Afghanistan"],
-    ["ax", "ALA", "Åland Islands"],
+    ["ax", "ALA", "Ã…land Islands"],
     ["al", "ALB", "Albania"],
     ["dz", "DZA", "Algeria"],
     ["as", "ASM", "American Samoa"],
@@ -59,10 +105,10 @@ var countryCodes = [
     ["cd", "COD", "Congo, the Democratic Republic of the"],
     ["ck", "COK", "Cook Islands"],
     ["cr", "CRI", "Costa Rica"],
-    ["ci", "CIV", "Côte d'Ivoire"],
+    ["ci", "CIV", "CÃ´te d'Ivoire"],
     ["hr", "HRV", "Croatia"],
     ["cu", "CUB", "Cuba"],
-    ["cw", "CUW", "Curaçao"],
+    ["cw", "CUW", "CuraÃ§ao"],
     ["cy", "CYP", "Cyprus"],
     ["cz", "CZE", "Czech Republic"],
     ["dk", "DNK", "Denmark"],
@@ -136,7 +182,7 @@ var countryCodes = [
     ["lt", "LTU", "Lithuania"],
     ["lu", "LUX", "Luxembourg"],
     ["mo", "MAC", "Macao"],
-    ["mk", "MKD", "Macedonia, the former Yugoslav Republic of"],
+    ["mk", "FYR", "Macedonia, the former Yugoslav Republic of"],
     ["mg", "MDG", "Madagascar"],
     ["mw", "MWI", "Malawi"],
     ["my", "MYS", "Malaysia"],
@@ -185,11 +231,11 @@ var countryCodes = [
     ["pt", "PRT", "Portugal"],
     ["pr", "PRI", "Puerto Rico"],
     ["qa", "QAT", "Qatar"],
-    ["re", "REU", "Réunion"],
-    ["ro", "ROU", "Romania"],
+    ["re", "REU", "RÃ©union"],
+    ["ro", "ROM", "Romania"],
     ["ru", "RUS", "Russian Federation"],
     ["rw", "RWA", "Rwanda"],
-    ["bl", "BLM", "Saint Barthélemy"],
+    ["bl", "BLM", "Saint BarthÃ©lemy"],
     ["sh", "SHN", "Saint Helena, Ascension and Tristan da Cunha"],
     ["kn", "KNA", "Saint Kitts and Nevis"],
     ["lc", "LCA", "Saint Lucia"],
