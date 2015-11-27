@@ -1,6 +1,12 @@
 /*
  * Change the color of the continent
  */
+
+#rawdata
+{
+	display: none;
+}
+
 .landxx
 {
    fill: #2b8cbe;
