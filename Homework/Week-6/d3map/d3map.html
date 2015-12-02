@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="d3map.css"/>
+		<title>World Map Visualization Using D3</title>
+	</head>
+	<body>
+		<h1> Income Inequality Across Countries</h1>
+        <div id="worldmap"></div>
+        	<script src="http://d3js.org/d3.v3.min.js"></script>
+			<script src="http://d3js.org/topojson.v1.min.js"></script>
+			<script src="worldmapbackup.js"></script>
+			<script src="d3map.js"></script>
+		</div>
+		<p>Source: <a href="http://data.worldbank.org/">World Bank</a></p>
+		<p><b>What am I looking at?</b> This map shows income distributions in countries. The darker the country, the more inequally income is distributed. In other words, the darker the color, the more of the national income is in the hands of a select few. The indicator used here is the Gini Index. If a country has a Gini Index of 0, all citizens have exactly the same income. In constrast, if a country's Gini Index is 100, all national income is in the hands of one individual. For each country, the most recent Gini Index from 2010-2015 was selected (if available). For a further explanation of the Gini coefficient, click <a href="https://en.wikipedia.org/wiki/Gini_coefficient"> here</a>.</p>
+		<p><b>Design justification:</b> On mouseover, I chose to display the name of the country and its Gini Index. This allows the user to determine the exact Gini coefficient for each country. Thus, in addition to determining the relative position of a country in the world with regards to inequality, which is facilitated by the sequential coloring, the user can determine the exact value for each country. One feature that my map does not allow for is finding a country by its name (for example if the user does not know its location).</p>
+
+	</body>
+
+</html>
+
+ 

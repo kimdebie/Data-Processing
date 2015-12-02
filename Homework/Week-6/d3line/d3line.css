@@ -1,0 +1,43 @@
+h1
+{
+  margin-left: 150px;
+  font: 30px sans-serif;
+}
+
+.axis, line
+{
+  fill: none;
+  stroke: black;
+  stroke-width: 1px;
+  shape-rendering: crispEdges;
+}
+
+.tick
+{
+  font: 10px sans-serif;
+  fill:black;
+  stroke:none;
+}
+
+#datelabel, #templabel
+{
+  font: 15px sans-serif;
+}
+
+.line
+{
+  stroke: red;
+  stroke-width: 2px;
+  fill: none;
+}
+
+.tooltip
+{
+  fill:transparent;
+}
+
+.tooltipLine
+{
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
