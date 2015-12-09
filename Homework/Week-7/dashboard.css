@@ -1,0 +1,115 @@
+body
+{
+	background-color: #FFFFFE
+}
+#worldmap 
+{
+	height: 500px;
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#dropdown
+{
+	margin-left: 1000px;
+}
+
+h1
+{
+	font-family:  'Hoefler Text', Georgia, 'Times New Roman', serif;
+	font-weight: normal;
+    font-size: 28px;
+	letter-spacing: .2em;
+	line-height: 1.5em;
+	margin:30px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+p
+{
+	width: 960px;
+	text-align: center;
+	font-family:georgia,serif;
+	font-size:12px;
+	line-height:150%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 25px;
+	color: #292B31;
+}
+
+a{
+    color: #292B31;
+}
+
+a:visited {
+    color: #292B31;
+}
+
+a:hover {
+    color: steelblue;
+}
+
+#barchart
+{
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.axis 
+{
+	font: 10px sans-serif;
+}
+
+.axis path,
+.axis line 
+{
+  	fill: none;
+  	stroke: #000;
+  	shape-rendering: crispEdges;
+}
+
+.bar 
+{
+  	fill: #2b8cbe;
+}
+
+.bar:hover 
+{
+  	fill: #a6bddb;
+}
+
+/* Tooltip: from http://bl.ocks.org/Caged/6476579 */
+
+.d3-tip 
+{
+	font: 10px sans-serif;
+	line-height: 1;
+	font-weight: bold;
+	padding: 12px;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	border-radius: 2px;
+}
+
+.d3-tip:after 
+{
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="dashboard.css"/>
+		<title>World Map Visualization Using D3</title>
+	</head>
+	<body>
+		<h1>Political Institutions and Economic Performance</h1>
+		<p><i>--by Kim de Bie (11077379)</i></p>
+		<p><i>Institutions are the humanly devised constraints that structure political, economic, and social interactions. They consist of both informal constraints (sanctions, taboos, customs, tradition, and code of conduct) and formal rules (constitutions, laws, property rights).</i> --Douglas North: Institutions, Institutional Change and Economic Performance (1990)</p>
+		<p><b>Institutional economics</b> is a relatively new branch of economics which has gained much popularity for its perceived power to explain divergent economic outcomes. Scholars in this field argue that there is a strong relationship between the quality of political institutions in a country and its economic performance. This data visualization allows you to explore different aspects of that relationship.</p>
+		<div id="starter"><p><b>To start the visualization, select an index from the drop-down menu below.</b></p></div>
+		<div>
+		<select id="dropdown" onchange="loadData()">
+			<option>Select an index</option>
+			<option value="gini">Gini Index</option>
+		  	<option value="polity">Polity IV Index</option>
+		</select>
+		</div>
+        <div id="worldmap"></div>
+        	<script src="jsbackup.js"></script>
+			<script src="topojasonbackup.js"></script>
+			<script src="worldmapbackup.js"></script>
+			<script src="queuebackup.js"></script>
+			<script src="tooltipbackup.js"></script>
+			<script src="dashboard.js"></script>
+		</div>
+		
+		<div id="explainer"></div>
+		<div id="barchart"></div>
+		<div id="barchartexplainer"></div>
+
+		<p>Sources: <a href="http://data.worldbank.org/">World Bank</a> and <a href="http://www.systemicpeace.org/"> Center for Systemic Peace</a></p>
+	</body>
+
+</html>
+
+ 
