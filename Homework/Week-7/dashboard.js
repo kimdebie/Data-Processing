@@ -24,9 +24,9 @@ var map = new Datamap({
 
 function loadData(){
   queue()
-    .defer(d3.json, 'http://localhost:8000/jsondatagini.json')
-    .defer(d3.json, 'http://localhost:8000/jsondatapolity.json')
-    .defer(d3.json, 'http://localhost:8000/jsondataGNI.json')
+    .defer(d3.json, 'jsondatagini.json')
+    .defer(d3.json, 'jsondatapolity.json')
+    .defer(d3.json, 'jsondataGNI.json')
     .await(createVisualization);
 };
 
